@@ -9,7 +9,16 @@ Returns 1 if it is, otherwise 0.
 ```SELECT IsNullOrEmpty(NULL);```							*Returns 1*\
 ```SELECT IsNullOrEmpty('');```								*Returns 1*\
 ```SELECT IsNullOrEmpty('Hello world!');```		*Returns 0*  
- 
+
+## FUNCTION WordCount(_input TEXT, _delimiter CHAR(1))
+Counts the words in the input string separated by the given delimiter.
+
+## PROCEDURE SplitString(IN _input TEXT, IN _delimiter CHAR(1))
+Splits a string into a table of trimmed words using the given delimiter.
+
+## PROCEDURE GetEnumValues(IN _database VARCHAR(100), IN _table VARCHAR(100), IN _column VARCHAR(100))
+Gets the individual enum-members from an ENUM column.
+********************************************************************************************
 # base32
 Contains functions and procedures to encode, decode and test Base32 strings.
 
@@ -20,7 +29,7 @@ See also [Wikipedia Base32](https://en.wikipedia.org/wiki/Base32)
 ### RFC 4648 §6
 ```'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567'```\
 **Exclusion:** `1, 8, 9 and 0`
-**Padding:** `=`\
+**Padding:** `=`
 
 ### Crockford's Base32 Alphabet
 ```'0123456789ABCDEFGHJKMNPQRSTWXYZ'```\
