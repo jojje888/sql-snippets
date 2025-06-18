@@ -1,5 +1,5 @@
 CREATE PROCEDURE SplitString(
-    IN _input VARCHAR(255),
+    IN _input TEXT,
     IN _delimiter CHAR(1)
 )
     COMMENT 'Splits a string into a table of trimmed words using the given delimiter.'
